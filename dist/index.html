@@ -9,6 +9,8 @@
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--<![endif]-->
+
+    <!-- Shell -->
     <style type="text/css">
         body,
         td {
@@ -35,10 +37,25 @@
             line-height: inherit !important
         }
 
+        @media screen and (max-width:650px) {
+            .mainTable {
+                width: 88% !important;
+                padding: 0 !important
+            }
+
+            .fullTable {
+                width: 100% !important;
+                height: auto !important
+            }
+        }
+    </style>
+
+    <!-- Content -->
+    <style type="text/css">
         nav {
             line-height: 100%;
-            border-top: 1px solid #949494;
-            border-bottom: 1px solid #949494;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
             width: 90%;
             max-width: 1200px;
             padding: 1rem 0;
@@ -66,6 +83,10 @@
             letter-spacing: 1px;
         }
 
+        .nav__link:hover {
+            color: #ed4870;
+        }
+
         .welcome__animation {
             display: block;
             margin-left: auto;
@@ -76,8 +97,9 @@
         .welcome__content {
             background: #ed4870;
             display: flex;
-            padding: 1rem 0;
-            font-weight: 300;
+            padding: 0rem 0;
+            padding-bottom: 1rem;
+            font-weight: 400;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
@@ -92,12 +114,21 @@
             padding: 0;
         }
 
+        p {
+            font-size: 1.25rem;
+            width: 70%;
+            text-align: center;
+            /* padding: 1rem 0; */
+            margin: 2rem 0;
+            color: white;
+        }
+
         .btn-cta {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 1rem auto;
+            margin: 0rem auto;
             margin-bottom: 2rem;
             outline: none;
             border: none;
@@ -124,13 +155,7 @@
             color: white;
         }
 
-        p {
-            font-size: 1.25rem;
-            width: 70%;
-            text-align: center;
-            margin: 1rem 0;
-            color: white;
-        }
+
 
         .shopping__title {
             background: #05e1d2;
@@ -169,6 +194,10 @@
             z-index: 1;
         }
 
+        .shopping__guide__content>img {
+            align-self: center
+        }
+
         .shopping__guide__info {
             padding: 3rem 0;
             width: 33.3333%;
@@ -179,20 +208,30 @@
 
         }
 
-        .shopping__guide__info>h3 {
+        .info__part {
+            margin: 0;
+            margin-bottom: 3rem;
+        }
+
+        .info__part:last-child {
+            margin: 0;
+        }
+
+        .shopping__guide__info>.info__part>h3 {
             display: block;
             font-size: 2.5rem;
             margin: 0;
-            /* margin: 1.5rem 0 1.5rem 0; */
+            margin-bottom: .75rem;
+            color: #303030;
         }
 
-        .shopping__guide__info>h5 {
+        .shopping__guide__info>.info__part>h5 {
             display: block;
             margin: 0;
             /* width: 100%; */
             font-size: 1.25rem;
             font-weight: 400;
-            color: black;
+            color: #303030;
         }
 
         .teal-curve {
@@ -201,7 +240,10 @@
             left: 0;
         }
 
+
+
         .bonuses__title {
+            padding: 4rem 0;
             background: #ed4870;
             display: flex;
             flex-direction: column;
@@ -210,26 +252,119 @@
         }
 
         .bonuses__title>h2 {
-            padding: 3rem 0;
+
             width: 80%;
-            font-size: 2.5rem;
+            font-size: 2rem;
+            letter-spacing: 5px;
             margin: 0;
             color: white;
             text-align: center;
         }
 
+        .bonuses__title>p {
+            padding-top: 2rem;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .btn-bonus {
+            display: none;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 3px;
+            color: white;
+        }
+
+        .btn-bonus>span>img {
+
+            padding-left: .75rem;
+            width: 8px;
+        }
+
+        /* MOBILE */
         @media screen and (max-width:650px) {
-            .mainTable {
-                width: 88% !important;
-                padding: 0 !important
+            nav {
+                display: none;
             }
 
-            .fullTable {
-                width: 100% !important;
-                height: auto !important
+            p {
+                font-size: 1rem;
+                width: 80%;
             }
+
+            .welcome__subtitle {
+                font-size: 1.5rem;
+            }
+
+            .shopping__title>h2 {
+
+                font-size: 1.5rem;
+
+            }
+
+            .shopping__guide__content {
+                flex-direction: column;
+                padding-bottom: 0;
+            }
+
+            .shopping__guide__content>img {
+                width: 70%;
+                margin: 0 auto;
+
+            }
+
+            .shopping__guide__info {
+                padding: 3rem auto;
+
+                margin: 0 auto;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+
+            .info__part {
+                margin-bottom: 3rem;
+            }
+
+            .info__part:last-child {
+                margin: 0;
+            }
+
+            .shopping__guide__info>.info__part>h3 {
+                margin: 0;
+                margin-bottom: .5rem;
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .shopping__guide__info>.info__part>h5 {
+                margin: 0;
+                font-size: 1rem;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            .btn-bonus {
+                display: block;
+            }
+
+            .bonuses__title {
+                padding: 2rem 0;
+            }
+
+            .bonuses__title>p {
+                padding-bottom: 2rem;
+            }
+
         }
     </style>
+
+
+
     <!--[if gte mso 9]>
 <xml>
 <o:OfficeDocumentSettings>
@@ -299,14 +434,20 @@ table {border-collapse:collapse !important}
                 <div class="shopping__guide__content">
                     <img src="images/online-shopping.gif" alt="Online Shopping">
                     <div class="shopping__guide__info">
-                        <h3>01.</h3>
-                        <h5>We’ll take you to the retailer’s app or website.</h5>
-                        <h3>02.</h3>
-                        <h5>Make your purchases. </h5>
-                        <h3>03.</h3>
-                        <h5>Wait for your cash to arrive. We’ll let you know how much you earned and when to expect it
-                            in
-                            your account.</h5>
+                        <div class="info__part">
+                            <h3>01.</h3>
+                            <h5>We’ll take you to the retailer’s app or website.</h5>
+                        </div>
+                        <div class="info__part">
+                            <h3>02.</h3>
+                            <h5>Make your purchases. </h5>
+                        </div>
+                        <div class="info__part">
+                            <h3>03.</h3>
+                            <h5>Wait for your cash to arrive. We’ll let you know how much you earned and when to expect
+                                it in your account.</h5>
+                        </div>
+
                     </div>
 
                 </div>
@@ -325,8 +466,11 @@ table {border-collapse:collapse !important}
                 <h2>WHAT ARE BONUSES?</h2>
                 <p>Bonuses are fun opportunities to earn extra cash. You can earn bonuses by redeeming offers and
                     referring friends. Check the Bonuses page of the app for more information on how to earn them.</p>
+
+                <a class="btn-bonus" href="https://ibotta.com/bonuses
+                ">VIEW BONUSES<span><img src="./images/white-pip.png" alt="pip"></span></a>
             </div>
-            <img src="" alt="">
+
         </section>
 
     </main>
