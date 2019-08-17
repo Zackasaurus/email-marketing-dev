@@ -12,6 +12,7 @@
     <style type="text/css">
         body,
         td {
+            box-sizing: border-box;
             Margin: 0;
             padding: 0;
             -webkit-text-size-adjust: 100% !important;
@@ -34,6 +35,189 @@
             line-height: inherit !important
         }
 
+        nav {
+            line-height: 100%;
+            border-top: 1px solid #949494;
+            border-bottom: 1px solid #949494;
+            width: 90%;
+            max-width: 1200px;
+            padding: 1rem 0;
+            margin: 0 auto 1rem auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            line-height: normal;
+        }
+
+        .nav__link {
+            text-transform: uppercase;
+            text-decoration: none;
+            line-height: normal;
+            color: #949494;
+            font-size: .75rem;
+            letter-spacing: 1px;
+        }
+
+        .welcome__animation {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .welcome__content {
+            background: #ed4870;
+            display: flex;
+            padding: 1rem 0;
+            font-weight: 300;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .welcome__subtitle {
+            width: 70%;
+            font-size: 2.5rem;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn-cta {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem auto;
+            margin-bottom: 2rem;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+            text-decoration: none;
+            background: #303030;
+            transition: all .2s ease;
+            cursor: pointer;
+            z-index: 1;
+
+
+        }
+
+        .btn-cta:hover {
+            background: #000;
+        }
+
+        .btn-cta>a {
+            min-width: 10rem;
+            display: block;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        p {
+            font-size: 1.25rem;
+            width: 70%;
+            text-align: center;
+            margin: 1rem 0;
+            color: white;
+        }
+
+        .shopping__title {
+            background: #05e1d2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shopping__title>h2 {
+            margin: 0;
+            padding: 3rem 0;
+            width: 80%;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            color: white;
+            text-align: center;
+        }
+
+        .shopping__guide {
+            background: white;
+            position: relative;
+            padding: 1rem 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+
+        }
+
+        .shopping__guide__content {
+            padding: 3rem 0;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            z-index: 1;
+        }
+
+        .shopping__guide__info {
+            padding: 3rem 0;
+            width: 33.3333%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+        }
+
+        .shopping__guide__info>h3 {
+            display: block;
+            font-size: 2.5rem;
+            margin: 0;
+            /* margin: 1.5rem 0 1.5rem 0; */
+        }
+
+        .shopping__guide__info>h5 {
+            display: block;
+            margin: 0;
+            /* width: 100%; */
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: black;
+        }
+
+        .teal-curve {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .bonuses__title {
+            background: #ed4870;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bonuses__title>h2 {
+            padding: 3rem 0;
+            width: 80%;
+            font-size: 2.5rem;
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
+
         @media screen and (max-width:650px) {
             .mainTable {
                 width: 88% !important;
@@ -44,50 +228,6 @@
                 width: 100% !important;
                 height: auto !important
             }
-        }
-
-        .navborder {
-            border-top: 1px solid #949494;
-            border-bottom: 1px solid #949494;
-            margin-bottom: 20px;
-            /* opacity: 0.5; */
-        }
-
-        .navtab {
-            padding: 17px 0 15px 0;
-            width: 25%;
-        }
-
-        .navlink {
-            color: #949494;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 12px;
-            line-height: 62.5%;
-            letter-spacing: 1px;
-            font-weight: 500;
-
-        }
-
-        .ibotta__welcome {
-            margin: 0;
-            padding: 0;
-            width: 90%;
-        }
-
-        .ibotta__module {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background: #ed4870;
-            width: 90%;
-
-        }
-
-        .subtitle {
-            font-size: 40px;
-            color: white;
-            line-height: 0px;
         }
     </style>
     <!--[if gte mso 9]>
@@ -107,7 +247,7 @@ table {border-collapse:collapse !important}
 
 </head>
 
-<body style="padding:0;Margin:0;color:#f4f4f4;background-color:#f4f4f4;width:100%;line-height:0;font-size:0">
+<body style="padding:0;Margin:0;background-color:#f4f4f4;width:100%;line-height:0;">
     <table align="center" cellpadding="0" cellspacing="0" class="mainTable" role="presentation"
         style="background-color:#f4f4f4;padding:0 10px;min-width:300px" width="100%">
 
@@ -127,106 +267,76 @@ table {border-collapse:collapse !important}
                 </table>
             </td>
         </tr>
-        <!-- START EMAIL CONTENT -->
 
-        <tr>
-            <td align="center">
-                <!-- NAV -->
-                <table class="navborder" cellpadding="0" cellspacing="0" class="fullTable" role="presentation"
-                    width="90%">
-
-                    <tr>
-
-                        <td class="navtab" align="center">
-                            <a class="navlink" href="https://ibotta.com/rebates">find offers</a>
-                        </td>
-                        <td class="navtab" align="center">
-                            <a class="navlink" href="https://ibotta.com/rebates/translate/category/88">grocery</a>
-                        </td>
-                        <td class="navtab" align="center">
-                            <a class="navlink" href="https://ibotta.com/rebates/translate/category/485">online
-                                shopping</a>
-                        </td>
-                        <td class="navtab" align="center">
-                            <a class="navlink" href="https://pay.ibotta.com">pay with ibotta</a>
-                        </td>
+    </table>
+    <!-- START EMAIL CONTENT -->
 
 
+    <!-- NAV -->
+    <nav>
+        <a class="nav__link" href="https://ibotta.com/rebates">find offers</a>
+        <a class="nav__link" href="https://ibotta.com/rebates/translate/category/88">grocery</a>
+        <a class="nav__link" href="https://ibotta.com/rebates/translate/category/485">online
+            shopping</a>
+        <a class="nav__link" href="https://pay.ibotta.com">pay with ibotta</a>
+    </nav>
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- WELCOME -->
+        <img class="welcome__animation" src="./images/welcome-to-ibotta.gif" alt="Welcome to ibotta">
+        <section class="welcome__content">
+            <h2 class="welcome__subtitle">Get up to $20 in Bonuses</h2>
+            <p>Redeem 5 offers and get $10. Get another $10 when you redeem 5 more!</p>
+            <button class="btn-cta"><a href="https://ibotta.com/rebates
+                ">START SHOPPING </a></button>
+        </section>
+        <!-- SHOPPING -->
+        <section class="shopping__content">
+            <div class="shopping__title">
+                <h2>Mobile Shopping 101</h2>
+            </div>
+            <div class="shopping__guide">
+                <div class="shopping__guide__content">
+                    <img src="images/online-shopping.gif" alt="Online Shopping">
+                    <div class="shopping__guide__info">
+                        <h3>01.</h3>
+                        <h5>We’ll take you to the retailer’s app or website.</h5>
+                        <h3>02.</h3>
+                        <h5>Make your purchases. </h5>
+                        <h3>03.</h3>
+                        <h5>Wait for your cash to arrive. We’ll let you know how much you earned and when to expect it
+                            in
+                            your account.</h5>
+                    </div>
 
-                    </tr>
-                </table>
-            </td>
-        </tr>
+                </div>
+                <button class="btn-cta"><a href="https://ibotta.com/rebates
+                    ">LEARN MORE </a></button>
 
-        <!-- WELCOME MODULE -->
-        <tr>
-            <td align="center">
-                <img class="ibotta__welcome" src="./images/welcome-to-ibotta.gif" alt="">
-            </td>
-        </tr>
-        <tr>
-            <!-- CONTENT -->
-            <td align="center">
-                <table class="ibotta__module" cellpadding="0" cellspacing="0" class="fullTable" role="presentation"
-                    width="90%">
+                <img class="teal-curve" src="images/teal-curve.png" alt="Teal Curve">
+            </div>
 
-                    <tr>
-                        <td align="center">
-                            <h2 class="subtitle">Get up to $20 in Bonuses</h2>
-                        </td>
-
-                        <!-- <td class="navtab" align="center">
-                            <a class="navlink" href="https://ibotta.com/rebates">find offers</a>
-                        </td>
-                        <td class="navtab" align="center">
-                            <a class="navlink" href="https://ibotta.com/rebates/translate/category/88">grocery</a>
-                        </td>
-                        <td class="navtab" align="center">
-                            <a class="navlink" href="https://ibotta.com/rebates/translate/category/485">online
-                                shopping</a>
-                        </td>
-                        <td class="navtab" align="center">
-                            <a class="navlink" href="https://pay.ibotta.com">pay with ibotta</a>
-                        </td> -->
+        </section>
 
 
+        <!-- BONUSES -->
+        <section class="bonuses">
+            <div class="bonuses__title">
+                <h2>WHAT ARE BONUSES?</h2>
+                <p>Bonuses are fun opportunities to earn extra cash. You can earn bonuses by redeeming offers and
+                    referring friends. Check the Bonuses page of the app for more information on how to earn them.</p>
+            </div>
+            <img src="" alt="">
+        </section>
 
-                    </tr>
-                </table>
-                <!-- <div class="ibotta__module">
-                    <h2 class="subtitle">test</h2>
-                </div> -->
-            </td>
-        </tr>
-        <!-- <tr class="container">
-
-            <nav>
-                <a href="#">find offers</a>
-                <a href="#">grocery</a>
-                <a href="#">online shopping</a>
-                <a href="#">pay with ibotta</a>
-            </nav>
+    </main>
 
 
 
 
-
-
-
-        </tr> -->
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- END MAIL CONTENT -->
+    <!-- END MAIL CONTENT -->
+    <table align="center" cellpadding="0" cellspacing="0" class="mainTable" role="presentation"
+        style="background-color:#f4f4f4;padding:0 10px;min-width:300px" width="100%">
         <!-- FOOTER -->
         <tr>
             <td align="center">
